@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تفاصيل العطل | ورشتي">
+  <title>تفاصيل العطل | ورشتي</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="fas fa-car"></i></div>
+        <span class="nav-logo-text">ورشتي</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-house"></i> الرئيسية</a></li>
+        <li><a href="systems.html" class="nav-link active"><i class="fas fa-gears"></i> الأنظمة</a></li>
+        <li><a href="parts.html" class="nav-link"><i class="fas fa-cog"></i> القطع</a></li>
+        <li><a href="faults.html" class="nav-link"><i class="fas fa-triangle-exclamation"></i> الأعطال</a></li>
+        <li><a href="search.html" class="nav-link"><i class="fas fa-search"></i> البحث</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-circle-info"></i> عن الموقع</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-search-btn" onclick="window.location.href='search.html'"><i class="fas fa-search"></i></button>
+        <a href="emergency.html" class="nav-emergency-btn"><i class="fas fa-road"></i> خدمات الطريق</a>
+      </div>
+      <button class="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    <a href="index.html" class="nav-link"><i class="fas fa-house"></i> الرئيسية</a>
+    <a href="systems.html" class="nav-link"><i class="fas fa-gears"></i> الأنظمة</a>
+    <a href="parts.html" class="nav-link"><i class="fas fa-cog"></i> القطع</a>
+    <a href="faults.html" class="nav-link active"><i class="fas fa-triangle-exclamation"></i> الأعطال</a>
+    <a href="search.html" class="nav-link"><i class="fas fa-search"></i> البحث</a>
+    <a href="emergency.html" class="btn btn-danger" style="margin-top:1rem; width:100%; justify-content:center;"><i class="fas fa-phone-alt"></i> طوارئ</a>
+  </div>
+
+  <div style="background:var(--white-soft); padding:1rem 0; border-bottom:1px solid rgba(76,175,80,0.03); margin-top:80px;">
+    <div class="container">
+      <div class="breadcrumb" id="fault-breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span class="breadcrumb-sep"><i class="fas fa-chevron-left"></i></span>
+        <a href="faults.html">الأعطال</a>
+        <span class="breadcrumb-sep"><i class="fas fa-chevron-left"></i></span>
+        <span>تفاصيل العطل</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="detail-layout">
+        <div class="detail-main" id="fault-main">
+          <div style="text-align:center; padding:4rem 2rem;">
+            <div class="spinner" style="margin:0 auto 1rem;"></div>
+            <p style="color:var(--text-muted);">جاري تحميل تفاصيل العطل...</p>
+          </div>
+        </div>
+
+        <div class="detail-sidebar" id="fault-sidebar">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="footer-logo-icon"><i class="fas fa-car"></i></div>
+            <span class="footer-logo-text">ورشتي</span>
+          </a>
+          <p class="footer-desc">
+            ورشتي هو موقع تعليمي متخصص في شرح أجزاء السيارة وأعطالها بطريقة مبسطة ومفهومة للجميع. هدفنا توعية السائقين وحمايتهم من الاستغلال.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">الأنظمة</h4>
+          <ul class="footer-links">
+            <li><a href="systems.html?system=engine" class="footer-link"><i class="fas fa-chevron-left"></i> نظام المحرك</a></li>
+            <li><a href="systems.html?system=brakes" class="footer-link"><i class="fas fa-chevron-left"></i> نظام الفرامل</a></li>
+            <li><a href="systems.html?system=battery" class="footer-link"><i class="fas fa-chevron-left"></i> البطارية والكهرباء</a></li>
+            <li><a href="systems.html?system=suspension" class="footer-link"><i class="fas fa-chevron-left"></i> نظام التعليق</a></li>
+            <li><a href="systems.html?system=cooling" class="footer-link"><i class="fas fa-chevron-left"></i> نظام التبريد</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+            <li><a href="parts.html" class="footer-link"><i class="fas fa-chevron-left"></i> القطع</a></li>
+            <li><a href="faults.html" class="footer-link"><i class="fas fa-chevron-left"></i> الأعطال</a></li>
+            <li><a href="search.html" class="footer-link"><i class="fas fa-chevron-left"></i> البحث</a></li>
+
+            <li><a href="about.html" class="footer-link"><i class="fas fa-chevron-left"></i> عن الموقع</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">خدمات الطريق</h4>
+          <ul class="footer-links">
+            <li><a href="emergency.html" class="footer-link"><i class="fas fa-gas-pump"></i> أقرب محطة وقود</a></li>
+            <li><a href="emergency.html" class="footer-link"><i class="fas fa-wrench"></i> أقرب ورشة صيانة</a></li>
+          </ul>
+          <div style="margin-top:1.5rem; padding:1rem; background:rgba(0,119,182,0.1); border-radius:var(--radius-md); border:1px solid rgba(0,119,182,0.2);">
+            <p style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-bottom:0.5rem;">خدمات الطريق</p>
+            <a href="emergency.html" style="font-size:1rem; font-weight:900; color:#ffffff; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;"><i class="fas fa-road"></i> ابدأ الآن</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          <p class="footer-copyright">&copy; 2026 ورشتي - جميع الحقوق محفوظة</p>
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">سياسة الخصوصية</a>
+          <a href="#" class="footer-bottom-link">شروط الاستخدام</a>
+          <a href="about.html" class="footer-bottom-link">عن الموقع</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="storage.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="system.js"></script>
+</body>
+</html>

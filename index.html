@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ورشتي - الورشة الذكية | موقع تعليمي لأجزاء السيارة وأعطالها وصيانتها">
+  <meta name="keywords" content="سيارة, قطع غيار, أعطال, صيانة, ورشة, فرامل, محرك, بطارية">
+  <meta name="author" content="ورشتي">
+  <meta property="og:title" content="ورشتي - الورشة الذكية">
+  <meta property="og:description" content="تعلم كل شيء عن سيارتك - القطع والأعطال والصيانة">
+  <title>ورشتي - الورشة الذكية</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="fas fa-car"></i></div>
+        <span class="nav-logo-text">ورشتي</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-house"></i> الرئيسية</a></li>
+        <li><a href="systems.html" class="nav-link active"><i class="fas fa-gears"></i> الأنظمة</a></li>
+        <li><a href="parts.html" class="nav-link"><i class="fas fa-cog"></i> القطع</a></li>
+        <li><a href="faults.html" class="nav-link"><i class="fas fa-triangle-exclamation"></i> الأعطال</a></li>
+        <li><a href="search.html" class="nav-link"><i class="fas fa-search"></i> البحث</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-circle-info"></i> عن الموقع</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-search-btn" onclick="window.location.href='search.html'"><i class="fas fa-search"></i></button>
+        <a href="emergency.html" class="nav-emergency-btn"><i class="fas fa-road"></i> خدمات الطريق</a>
+      </div>
+      <button class="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    <a href="index.html" class="nav-link active"><i class="fas fa-house"></i> الرئيسية</a>
+    <a href="systems.html" class="nav-link"><i class="fas fa-gears"></i> الأنظمة</a>
+    <a href="parts.html" class="nav-link"><i class="fas fa-cog"></i> القطع</a>
+    <a href="faults.html" class="nav-link"><i class="fas fa-triangle-exclamation"></i> الأعطال</a>
+    <a href="search.html" class="nav-link"><i class="fas fa-search"></i> البحث</a>
+    <a href="about.html" class="nav-link"><i class="fas fa-circle-info"></i> عن الموقع</a>
+    <button class="nav-lang-btn" onclick="Lang.toggle()" style="margin-top:0.5rem;">EN</button>
+  </div>
+
+  <section class="hero">
+    <div class="hero-particles"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-star"></i>
+          الورشة الذكية الأولى عربياً
+        </div>
+        <h1 class="hero-title">
+          افهم سيارتك
+          قبل الورشة
+        </h1>
+        <p class="hero-subtitle">
+          موقع تعليمي شامل يشرح أجزاء سيارتك، وظيفة كل قطعة، وأشهر الأعطال بطريقة مبسطة مع صور توضيحية. لا تدفع أكثر مما تستحق!
+        </p>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="6">0</span>
+            <span class="hero-stat-label">قطعة موثقة</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="6">0</span>
+            <span class="hero-stat-label">عطل شائع</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="6">0</span>
+            <span class="hero-stat-label">نظام رئيسي</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="systems.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-play"></i>
+            ابدأ التعلم الآن
+          </a>
+          <a href="faults.html" class="btn btn-secondary btn-lg">
+            <i class="fas fa-triangle-exclamation"></i>
+            تشخيص العطل
+          </a>
+        </div>
+
+        <div class="search-bar-wrapper" style="margin-top:2rem;">
+          <i class="fas fa-search search-bar-icon"></i>
+          <input type="text" class="search-bar hero-search-input" placeholder="ابحث عن قطعة أو عطل... مثل: فرامل، بطارية، تسرب زيت">
+          <button class="search-bar-btn" onclick="window.location.href='search.html?q='+document.querySelector('.hero-search-input').value">بحث</button>
+          <div class="search-results-dropdown"></div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-container">
+          <img src="car_workshop.png" alt="سيارة فاخرة - ورشتي" loading="eager">
+          <div class="hero-image-overlay"></div>
+          <div class="hero-image-badge">
+            <i class="fas fa-shield-check" style="margin-left:0.4rem;"></i>
+            معلومات موثوقة ومحدّثة
+          </div>
+        </div>
+
+        <div class="hero-floating-card card-1">
+          <div class="floating-card-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <div class="floating-card-text">
+            <span class="floating-card-title">+6 قطع موثقة</span>
+            <span class="floating-card-sub">مع صور وشرح وافٍ</span>
+          </div>
+        </div>
+
+        <div class="hero-floating-card card-2">
+          <div class="floating-card-icon">
+            <i class="fas fa-triangle-exclamation"></i>
+          </div>
+          <div class="floating-card-text">
+            <span class="floating-card-title">تشخيص الأعطال</span>
+            <span class="floating-card-sub">أسباب وحلول مقترحة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-star"></i> لماذا ورشتي؟</span>
+        <h2 class="section-title">كل ما تحتاجه في مكان واحد</h2>
+        <div class="section-divider gold-line-center"></div>
+        <p class="section-desc">صممنا ورشتي لتكون مرجعك الأول قبل الذهاب لأي ورشة صيانة</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+          <h3 class="feature-title">تعليم مبسط</h3>
+          <p class="feature-desc">شرح واضح وبسيط لكل قطعة في سيارتك مع صور توضيحية عالية الجودة</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <h3 class="feature-title">تشخيص الأعطال</h3>
+          <p class="feature-desc">تعرف على سبب العطل وحله قبل الذهاب للورشة لتجنب الاستغلال</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-tag"></i></div>
+          <h3 class="feature-title">تكاليف الاستبدال</h3>
+          <p class="feature-desc">اعرف التكلفة التقديرية لكل قطعة حتى لا يتم استغلالك في الورشة</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-clock"></i></div>
+          <h3 class="feature-title">العمر الافتراضي</h3>
+          <p class="feature-desc">تعلم متى يجب استبدال كل قطعة وكيف تطيل عمرها الافتراضي</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-location-dot"></i></div>
+          <h3 class="feature-title">أقرب محطة وقود</h3>
+          <p class="feature-desc">اعثر على أقرب محطة وقود أو ورشة حسب موقعك الحالي</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-gears"></i> أنظمة السيارة</span>
+        <h2 class="section-title">استكشف أنظمة سيارتك</h2>
+        <div class="section-divider gold-line-center"></div>
+        <p class="section-desc">اختر النظام الذي تريد تعلمه وستجد شرحاً كاملاً لكل قطعة وعطل</p>
+      </div>
+
+      <div class="systems-grid" id="home-systems-grid">
+        <div class="spinner"></div>
+      </div>
+
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="systems.html" class="btn btn-outline-gold btn-lg">
+          <i class="fas fa-gears"></i>
+          عرض جميع الأنظمة
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background:rgba(76,175,80,0.15); border-color:rgba(76,175,80,0.3); color:var(--green);">
+          <i class="fas fa-play"></i> كيف يعمل الموقع
+        </span>
+        <h2 class="section-title">خطوات بسيطة للفهم الكامل</h2>
+        <div class="section-divider gold-line-center"></div>
+        <p class="section-desc">ثلاث خطوات فقط لتفهم سيارتك بالكامل</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card card-dark fade-in" style="background:rgba(255,255,255,0.04); border:1px solid rgba(76,175,80,0.15);">
+          <div class="feature-number">١</div>
+          <h3 class="feature-title" style="color:var(--white);">اختر النظام</h3>
+          <p class="feature-desc" style="color:rgba(255,255,255,0.6);">اختر نظام السيارة الذي تريد تعلمه: المحرك، الفرامل، البطارية، التعليق...</p>
+        </div>
+        <div class="feature-card card-dark fade-in" style="background:rgba(255,255,255,0.04); border:1px solid rgba(76,175,80,0.15);">
+          <div class="feature-number">٢</div>
+          <h3 class="feature-title" style="color:var(--white);">استعرض القطع</h3>
+          <p class="feature-desc" style="color:rgba(255,255,255,0.6);">تعرف على كل قطعة في النظام مع صورها ووظيفتها وعمرها الافتراضي وتكلفة استبدالها</p>
+        </div>
+        <div class="feature-card card-dark fade-in" style="background:rgba(255,255,255,0.04); border:1px solid rgba(76,175,80,0.15);">
+          <div class="feature-number">٣</div>
+          <h3 class="feature-title" style="color:var(--white);">تشخيص الأعطال</h3>
+          <p class="feature-desc" style="color:rgba(255,255,255,0.6);">اعرف أسباب الأعطال الشائعة وحلولها قبل الذهاب للورشة لتوفير المال والوقت</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-fire"></i> الأكثر بحثاً</span>
+        <h2 class="section-title">القطع الأكثر شيوعاً</h2>
+        <div class="section-divider gold-line-center"></div>
+        <p class="section-desc">أكثر القطع التي يبحث عنها المستخدمون</p>
+      </div>
+
+      <div class="parts-grid" id="home-parts-grid">
+        <div class="spinner"></div>
+      </div>
+
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="parts.html" class="btn btn-outline-gold btn-lg">
+          <i class="fas fa-cog"></i>
+          عرض جميع القطع
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-gold">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background:rgba(76,175,80,0.15); border-color:rgba(76,175,80,0.3); color:var(--green);">
+          <i class="fas fa-chart-bar"></i> بالأرقام
+        </span>
+        <h2 class="section-title" style="color:var(--white);">ورشتي بالأرقام</h2>
+        <div class="section-divider gold-line-center"></div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card fade-in">
+          <span class="stat-number" data-count="6" data-suffix="+">0</span>
+          <span class="stat-label">نظام رئيسي</span>
+        </div>
+        <div class="stat-card fade-in">
+          <span class="stat-number" data-count="6" data-suffix="+">0</span>
+          <span class="stat-label">قطعة موثقة</span>
+        </div>
+        <div class="stat-card fade-in">
+          <span class="stat-number" data-count="6" data-suffix="+">0</span>
+          <span class="stat-label">عطل شائع</span>
+        </div>
+        <div class="stat-card fade-in">
+          <span class="stat-number" data-count="100" data-suffix="%">0</span>
+          <span class="stat-label">مجاني تماماً</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-triangle-exclamation"></i> أعطال شائعة</span>
+        <h2 class="section-title">الأعطال الأكثر خطورة</h2>
+        <div class="section-divider gold-line-center"></div>
+        <p class="section-desc">تعرف على أخطر الأعطال التي قد تواجهها وكيف تتعامل معها</p>
+      </div>
+
+      <div class="systems-grid" id="home-faults-grid">
+        <div class="spinner"></div>
+      </div>
+
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="faults.html" class="btn btn-outline-gold btn-lg">
+          <i class="fas fa-triangle-exclamation"></i>
+          عرض جميع الأعطال
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-lightbulb"></i> نصائح</span>
+        <h2 class="section-title">نصائح الصيانة الدورية</h2>
+        <div class="section-divider gold-line-center"></div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-oil-can"></i></div>
+          <h3 class="feature-title">تغيير الزيت</h3>
+          <p class="feature-desc">غيّر زيت المحرك كل 5,000 كم للمحافظة على المحرك وإطالة عمره الافتراضي</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-circle"></i></div>
+          <h3 class="feature-title">ضغط الإطارات</h3>
+          <p class="feature-desc">تحقق من ضغط الإطارات أسبوعياً لضمان السلامة وتوفير استهلاك الوقود</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-temperature-low"></i></div>
+          <h3 class="feature-title">سائل التبريد</h3>
+          <p class="feature-desc">تأكد من مستوى سائل التبريد أسبوعياً لمنع ارتفاع حرارة المحرك</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-circle-stop"></i></div>
+          <h3 class="feature-title">فحص الفرامل</h3>
+          <p class="feature-desc">افحص تيل الفرامل كل 20,000 كم واستبدله قبل أن يصل للحد الأدنى</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="footer-logo-icon"><i class="fas fa-car"></i></div>
+            <span class="footer-logo-text">ورشتي</span>
+          </a>
+          <p class="footer-desc">
+            ورشتي هو موقع تعليمي متخصص في شرح أجزاء السيارة وأعطالها بطريقة مبسطة ومفهومة للجميع. هدفنا توعية السائقين وحمايتهم من الاستغلال.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">الأنظمة</h4>
+          <ul class="footer-links">
+            <li><a href="systems.html?system=engine" class="footer-link"><i class="fas fa-chevron-left"></i> نظام المحرك</a></li>
+            <li><a href="systems.html?system=brakes" class="footer-link"><i class="fas fa-chevron-left"></i> نظام الفرامل</a></li>
+            <li><a href="systems.html?system=battery" class="footer-link"><i class="fas fa-chevron-left"></i> البطارية والكهرباء</a></li>
+            <li><a href="systems.html?system=suspension" class="footer-link"><i class="fas fa-chevron-left"></i> نظام التعليق</a></li>
+            <li><a href="systems.html?system=cooling" class="footer-link"><i class="fas fa-chevron-left"></i> نظام التبريد</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+            <li><a href="parts.html" class="footer-link"><i class="fas fa-chevron-left"></i> القطع</a></li>
+            <li><a href="faults.html" class="footer-link"><i class="fas fa-chevron-left"></i> الأعطال</a></li>
+            <li><a href="search.html" class="footer-link"><i class="fas fa-chevron-left"></i> البحث</a></li>
+
+            <li><a href="about.html" class="footer-link"><i class="fas fa-chevron-left"></i> عن الموقع</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">خدمات الطريق</h4>
+          <ul class="footer-links">
+            <li><a href="emergency.html" class="footer-link"><i class="fas fa-gas-pump"></i> أقرب محطة وقود</a></li>
+            <li><a href="emergency.html" class="footer-link"><i class="fas fa-wrench"></i> أقرب ورشة صيانة</a></li>
+          </ul>
+          <div style="margin-top:1.5rem; padding:1rem; background:rgba(0,119,182,0.1); border-radius:var(--radius-md); border:1px solid rgba(0,119,182,0.2);">
+            <p style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-bottom:0.5rem;">خدمات الطريق</p>
+            <a href="emergency.html" style="font-size:1rem; font-weight:900; color:#ffffff; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;"><i class="fas fa-road"></i> ابدأ الآن</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          <p class="footer-copyright">&copy; 2026 ورشتي - جميع الحقوق محفوظة</p>
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">سياسة الخصوصية</a>
+          <a href="#" class="footer-bottom-link">شروط الاستخدام</a>
+          <a href="about.html" class="footer-bottom-link">عن الموقع</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+
+  <script src="storage.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="search.js"></script>
+  <script src="system.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroStats = document.querySelectorAll('.hero-stat-number[data-count]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-count'));
+            let current = 0;
+            const step = target / 60;
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = Math.floor(current);
+            }, 16);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      heroStats.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
